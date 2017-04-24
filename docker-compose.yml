@@ -16,6 +16,9 @@ hygieia-api:
   - ./logs:/hygieia/logs
   links:
   - mongodb:mongo
+  environment:
+  - JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret
+
 hygieia-ui:
   image: hygieia-ui:latest
   container_name: hygieia-ui
