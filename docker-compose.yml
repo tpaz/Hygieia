@@ -313,6 +313,7 @@ hygieia-artifactory-artifact-collector:
   - ./logs:/hygieia/logs
   links:
   - hygieia-api
+  - mongodb:mongo
   environment:
 #JFrog Artifactory server (required) - Can provide multiple 
   - ARTIFACTORY_URL=https://www.jfrog.com
